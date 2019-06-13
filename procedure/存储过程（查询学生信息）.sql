@@ -1,13 +1,14 @@
---ÖÁÉÙ3¸ö´æ´¢¹ı³Ì
---ÖÁÉÙ5¸ö´¥·¢Æ÷
---ÖÁÉÙÒ»¸öÊÂÎñ
---²éÑ¯Ñ§ÉúĞÅÏ¢
-create proc QureuInfor
+--è‡³å°‘3ä¸ªå­˜å‚¨è¿‡ç¨‹
+--è‡³å°‘5ä¸ªè§¦å‘å™¨
+--è‡³å°‘ä¸€ä¸ªäº‹åŠ¡
+--æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯
+create proc QureyInfor
 @ID char(15)
+@result char(10) output
 as
 begin
 	declare @cant varchar(50)
-	set @cant='ĞÅÏ¢²»´æÔÚ'
+	set @cant='ä¿¡æ¯ä¸å­˜åœ¨'
 	if exists(select * from Studentview where StuId=@ID)
 		select *
 		from Student
